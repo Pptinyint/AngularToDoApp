@@ -1,0 +1,12 @@
+<app-page-title></app-page-title>
+ <div class="flex mt-6">
+  <input type="text" placeholder="type your task" class="w-full h-10 shadow rounded py-2 px-4" [(ngModel)]="addTaskInput" (keydown.enter)="addTask()" />
+ </div>
+ <div class="flex flex-col mt-6">
+  <h2 class="font-bold text-xl">Task </h2>
+  
+  <app-task-list 
+  [taskListArr]="taskListArr" (complete)="onComplete($event)" (important)="onImportant($event)">
+</app-task-list> 
+
+  </div>
